@@ -14,13 +14,12 @@ class Console:
 
     def run_console(self):
         while True:
-            print("\nwow you really enjoy suffering don't you\n")
             play_mode=input("choose:\n1. human vs ai\n2. human vs human\n")
 
             # rps
 
             if play_mode=="1":
-                print("let's settle who will start first the gentleman's way: a fair game of rock-paper-scissors")
+                print("let's settle who will start first the classic way: a fair game of rock-paper-scissors")
                 rps_done=0
                 while rps_done==0:
                     print("choose:")
@@ -41,7 +40,7 @@ class Console:
                     self.player_to_move=1+(result==-1)
                     if result!=0: rps_done=1
             elif play_mode=="2":
-                print("just rock-paper-scissors irl for first to move lol")
+                print("just rock-paper-scissors irl for first to move")
                 self.player_to_move=1
             else: print("please type 1 or 2")
 
@@ -95,7 +94,7 @@ class Console:
                                 valid_wall=1
                                 print()
                                 self.board_class.place_wall(Wall(dir,(cord1_x,cord1_y),(cord2_x,cord2_y),(cord3_x,cord3_y),(cord4_x,cord4_y)))
-                            else: print("invalid coordinates, don't go off the grid grid grid")
+                            else: print("invalid coordinates, please don't go off the grid")
                     self.print_board()
                     self.print_walls_list()
                     self.player_to_move = 3 - self.player_to_move
@@ -156,7 +155,7 @@ class Console:
                                     valid_wall = 1
                                     self.board_class.place_wall(Wall(dir,(cord1_x,cord1_y),(cord2_x,cord2_y),(cord3_x,cord3_y),(cord4_x,cord4_y)))
                                 else:
-                                    print("invalid coordinates, don't go off the grid grid grid")
+                                    print("invalid coordinates, please don't go off the grid")
                     elif play_mode=="1":
                         ai = DumbAI(self.board_class)
                         ans = 1

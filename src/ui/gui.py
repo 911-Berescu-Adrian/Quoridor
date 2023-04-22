@@ -261,7 +261,7 @@ class Gui:
         while self.run:
             bg = pygame.image.load("images/menu.png")
             window.blit(bg, (0, 0))
-            self.pygame_doesnt_have_text(window, 600, 200, 100, 100, "just rps irl lol")
+            self.pygame_doesnt_have_text(window, 600, 200, 100, 100, "play rps in real life to decide who's goes first")
             self.button(window, 600, 400, 150, 20, "continue", self.game_board, 0, 0)
             self.button(window, self.win_width // 2 - 40, self.win_height - 260, 80, 40, "back",
                         self.main_menu, 0, 0)
